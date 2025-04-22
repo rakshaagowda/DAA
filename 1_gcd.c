@@ -35,3 +35,20 @@ int gcdConsecutiveIntegerCheck(int m, int n)
 
     return m > n ? m : n;
 }
+int modifiedEuclids(int m, int n)
+{
+    if (n == 0 || m == 0)
+        return m > n ? m : n;
+
+    count = 0;
+
+    while (++count && m != n)
+    {
+        if (m > n)
+            m -= n;
+        else
+            n -= m;
+    }
+
+    return n;
+}
