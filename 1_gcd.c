@@ -131,3 +131,22 @@ void plotter()
         fprintf(f6, "%d\t%d\n", i, max);
     }
 }
+
+void main()
+{
+    int ch;
+    printf("\nEnter:\n1.Tester\n2.Plotter\n");
+    scanf("%d", &ch);
+
+    switch (ch)
+    {
+    case 1:
+        tester();
+        break;
+    case 2:
+        plotter();
+        break;
+    default:
+        printf("Invalid Choice!!");
+    }
+}
