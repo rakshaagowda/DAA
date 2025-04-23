@@ -52,3 +52,18 @@ int modifiedEuclids(int m, int n)
 
     return n;
 }
+void tester()
+{
+    int m, n;
+    printf("Enter 2 numbers : ");
+    scanf("%d%d", &m, &n);
+
+    if (m < 0 && n < 0)
+    {
+        printf("Cannot find gcd...Invalid inputs...");
+    }
+
+    printf("gcd through euclid algorithm :%d\n", gcdEuclid(m, n));
+    printf("gcd through consecutive checking method :%d\n", gcdConsecutiveIntegerCheck(m, n));
+    printf("gcd through repeated subtraction method :%d\n", modifiedEuclids(m, n));
+}
