@@ -67,3 +67,67 @@ void tester()
     printf("gcd through consecutive checking method :%d\n", gcdConsecutiveIntegerCheck(m, n));
     printf("gcd through repeated subtraction method :%d\n", modifiedEuclids(m, n));
 }
+
+void plotter()
+{
+    FILE *f1 = fopen("euclidBest.txt", "w");
+    FILE *f2 = fopen("euclidWorst.txt", "w");
+    FILE *f3 = fopen("consecBest.txt", "w");
+    FILE *f4 = fopen("consecWorst.txt", "w");
+    FILE *f5 = fopen("modifiedBest.txt", "w");
+    FILE *f6 = fopen("modifiedWorst.txt", "w");
+
+    for (int i = 10; i <= 100; i += 10)
+    {
+        int min = INT_MAX, max = INT_MIN;
+        for (int j = 2; j <= i; j++)
+        {
+            for (int k = 2; k <= i; k++)
+            {
+                gcdEuclid(j, k);
+                if (count < min)
+                    min = count;
+                if (count > max)
+                    max = count;
+            }
+        }
+        fprintf(f1, "%d\t%d\n", i, min);
+        fprintf(f2, "%d\t%d\n", i, max);
+    }
+
+    for (int i = 10; i <= 100; i += 10)
+    {
+        int min = INT_MAX, max = INT_MIN;
+        for (int j = 2; j <= i; j++)
+        {
+            for (int k = 2; k <= i; k++)
+            {
+                gcdConsecutiveIntegerCheck(j, k);
+                if (count < min)
+                    min = count;
+                if (count > max)
+                    max = count;
+            }
+        }
+        fprintf(f3, "%d\t%d\n", i, min);
+        fprintf(f4, "%d\t%d\n", i, max);
+    }
+
+    for (int i = 10; i <= 100; i += 10)
+    {
+        int min = INT_MAX, max = INT_MIN;
+        for (int j = 2; j <= i; j++)
+        {
+            for (int k = 2; k <= i; k++)
+            {
+                modifiedEuclids(j, k);
+                if (count < min)
+                    min = count;
+                if (count > max)
+                    max = count;
+            }
+        }
+        fprintf(f5, "%d\t%d\n", i, min);
+        fprintf(f6, "%d\t%d\n", i, max);
+    }
+}
