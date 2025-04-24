@@ -68,6 +68,7 @@ void tester()
     printf("gcd through consecutive checking method :%d\n", gcdConsecutiveIntegerCheck(m, n));
     printf("gcd through repeated subtraction method :%d\n", modifiedEuclids(m, n));
 }
+//analyse
 
 void plotter()
 {
