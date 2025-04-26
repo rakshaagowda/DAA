@@ -4,7 +4,7 @@
 #include <limits.h>
 
 int count = 0;
-//design
+//design the algorithm
 int gcdEuclid(int m, int n)
 {
     count = 0;
