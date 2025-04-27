@@ -72,6 +72,7 @@ void tester()
 
 void plotter()
 {
+    //each file to maintain best and worstcase of 3 algorithm
     FILE *f1 = fopen("euclidBest.txt", "w");
     FILE *f2 = fopen("euclidWorst.txt", "w");
     FILE *f3 = fopen("consecBest.txt", "w");
