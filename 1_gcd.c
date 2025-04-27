@@ -134,7 +134,7 @@ void plotter()
         fprintf(f6, "%d\t%d\n", i, max);
     }
 }
-
+//main function
 void main()
 {
     int ch;
