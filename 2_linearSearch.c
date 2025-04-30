@@ -71,3 +71,20 @@ void plotter()
     fclose(f2);
     fclose(f3);
 }
+void main()
+{
+    int ch;
+    printf("Enter your choice:\n\n1.Tester\n2.Plotter\n");
+    scanf("%d", &ch);
+    switch (ch)
+    {
+    case 1:
+        tester();
+        break;
+    case 2:
+        plotter();
+        break;
+    default:
+        printf("Invalid choice!!!\n");
+    }
+}
