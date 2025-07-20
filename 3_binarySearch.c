@@ -3,7 +3,7 @@
 int n,count,key;
 int binary(int *arr,int key,int low, int high){
   int mid=(high+low)/2;
-  
+  count++;
     if(*(arr+mid)==key){
         return mid+1;
     }
